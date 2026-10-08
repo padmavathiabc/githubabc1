@@ -19,6 +19,7 @@
             line-height: 1.6;
             background: #f5f7fa;
             color: #222;
+            transition: 0.3s;
         }
 
         header {
@@ -186,15 +187,50 @@
             text-decoration: none;
         }
 
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
         footer {
             background: #111827;
             color: white;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background: #121212;
+            color: white;
+        }
+
+        .dark-mode .hero,
+        .dark-mode section,
+        .dark-mode .skill,
+        .dark-mode .project,
+        .dark-mode .education,
+        .dark-mode .contact {
+            background: #1e1e1e;
+            color: white;
+        }
+
+        .dark-mode .hero h2,
+        .dark-mode .hero p {
+            color: #ddd;
+        }
+
+        .dark-mode .contact a {
+            color: #90caf9;
+        }
+
+        #themeBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 9999;
+            background: #ffffff;
+            color: #111827;
+            font-weight: bold;
         }
 
         @media (max-width: 700px) {
@@ -238,10 +274,10 @@
         </nav>
     </header>
 
-
     <!-- Home -->
     <section class="hero" id="home">
         <div>
+
             <img src="photo.jpg" alt="E. Padmavathi">
 
             <h1>Hello, I'm E. Padmavathi</h1>
@@ -253,9 +289,9 @@
             </p>
 
             <a href="#about" class="btn">Know More</a>
+
         </div>
     </section>
-
 
     <!-- About -->
     <section id="about">
@@ -274,7 +310,6 @@
         </div>
     </section>
 
-
     <!-- Skills -->
     <section id="skills">
         <div class="container">
@@ -284,26 +319,18 @@
             <div class="skills">
 
                 <div class="skill">Python</div>
-
                 <div class="skill">HTML</div>
-
                 <div class="skill">CSS</div>
-
                 <div class="skill">Java</div>
-
                 <div class="skill">SQL</div>
-
                 <div class="skill">Data Analytics</div>
-
                 <div class="skill">Machine Learning</div>
-
                 <div class="skill">Artificial Intelligence</div>
 
             </div>
 
         </div>
     </section>
-
 
     <!-- Projects -->
     <section id="projects">
@@ -315,27 +342,22 @@
 
                 <div class="project">
                     <h3>Portfolio Website</h3>
-
                     <p>
                         A personal portfolio website created using HTML and CSS
                         to showcase my skills, education and projects.
                     </p>
                 </div>
 
-
                 <div class="project">
                     <h3>Data Analytics Project</h3>
-
                     <p>
                         A project focused on analysing data and finding
                         useful insights using data analytics techniques.
                     </p>
                 </div>
 
-
                 <div class="project">
                     <h3>Machine Learning Project</h3>
-
                     <p>
                         A basic machine learning project designed to understand
                         data preprocessing, model training and prediction.
@@ -347,7 +369,6 @@
         </div>
     </section>
 
-
     <!-- Education -->
     <section id="education">
         <div class="container">
@@ -358,23 +379,16 @@
 
                 <h3>B.E. Artificial Intelligence and Data Science</h3>
 
-                <p>
-                    Madha Engineering College
-                </p>
+                <p>Madha Engineering College</p>
 
-                <p>
-                    Kundrathur, Chennai
-                </p>
+                <p>Kundrathur, Chennai</p>
 
-                <p>
-                    Currently pursuing my undergraduate degree.
-                </p>
+                <p>Currently pursuing my undergraduate degree.</p>
 
             </div>
 
         </div>
     </section>
-
 
     <!-- Contact -->
     <section id="contact" class="contact">
@@ -404,50 +418,27 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer>
         <p>© 2026 E. Padmavathi. All Rights Reserved.</p>
     </footer>
-<button id="themeBtn" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-<script>
-function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
+    <!-- Dark Mode Button -->
+    <button id="themeBtn" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-    const btn = document.getElementById("themeBtn");
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
 
-    if (document.body.classList.contains("dark-mode")) {
-        btn.innerHTML = "☀️ Light Mode";
-    } else {
-        btn.innerHTML = "🌙 Dark Mode";
-    }
-}
-</script>
+            const btn = document.getElementById("themeBtn");
 
-<style>
-.dark-mode {
-    background-color: #121212 !important;
-    color: white !important;
-}
+            if (document.body.classList.contains("dark-mode")) {
+                btn.innerHTML = "☀️ Light Mode";
+            } else {
+                btn.innerHTML = "🌙 Dark Mode";
+            }
+        }
+    </script>
 
-.dark-mode section,
-.dark-mode .card {
-    background-color: #1e1e1e !important;
-    color: white !important;
-}
-
-#themeBtn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    z-index: 999;
-}
-</style>
-<button id "themebtn" onclick="toggleTheme()">dark Mode</button>
 </body>
 </html>
