@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>E. Padmavathi | AI & Data Science Student</title>
 
     <style>
         * {
@@ -16,6 +16,7 @@
 
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             background: #f5f7fa;
             color: #222;
         }
@@ -24,27 +25,41 @@
             background: #111827;
             color: white;
             padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        header h2 {
-            font-size: 24px;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        nav a {
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
+            font-weight: bold;
         }
 
-        nav a:hover {
-            color: #60a5fa;
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 70px 8%;
         }
 
         .hero {
@@ -52,162 +67,154 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 70px;
-            padding: 50px 8%;
+            text-align: center;
             background: white;
         }
 
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .hero-text h1 span {
-            color: #2563eb;
-        }
-
-        .hero-text h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .hero-text p {
-            line-height: 1.7;
-            color: #555;
-        }
-
         .hero img {
-            width: 280px;
-            height: 330px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 20px;
-            border: 5px solid #2563eb;
+            border-radius: 50%;
+            border: 5px solid #111827;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
         }
 
         .btn {
             display: inline-block;
             margin-top: 25px;
             padding: 12px 25px;
-            background: #2563eb;
+            background: #111827;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
-        section {
-            padding: 70px 8%;
+        .btn:hover {
+            background: #374151;
         }
 
-        section h2 {
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
             text-align: center;
             font-size: 32px;
-            margin-bottom: 35px;
-            color: #111827;
+            margin-bottom: 30px;
         }
 
-        .about {
-            background: #f5f7fa;
-            text-align: center;
-        }
-
-        .about p {
+        .about-text {
             max-width: 800px;
             margin: auto;
-            line-height: 1.8;
-            color: #555;
+            text-align: center;
+            font-size: 18px;
         }
 
-        .skills-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
         }
 
         .skill {
             background: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-weight: bold;
         }
 
         .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
             background: white;
-        }
-
-        .project-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        .project-card {
-            width: 300px;
-            background: #f5f7fa;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .project-card h3 {
-            margin-bottom: 12px;
-            color: #2563eb;
-        }
-
-        .project-card p {
-            line-height: 1.6;
-            color: #555;
+        .project h3 {
+            margin-bottom: 10px;
         }
 
         .education {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: auto;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .contact {
-            background: #111827;
-            color: white;
             text-align: center;
-        }
-
-        .contact h2 {
-            color: white;
+            background: white;
         }
 
         .contact p {
-            margin: 10px;
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #111827;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         footer {
-            background: #030712;
+            background: #111827;
             color: white;
             text-align: center;
             padding: 20px;
         }
 
-        @media (max-width: 768px) {
-
-            header {
+        @media (max-width: 700px) {
+            nav {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav a {
-                margin: 8px;
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
+            .hero h1 {
+                font-size: 32px;
             }
 
-            .hero-text h1 {
-                font-size: 38px;
+            .hero h2 {
+                font-size: 20px;
             }
         }
     </style>
@@ -217,167 +224,190 @@
 
     <!-- Navigation -->
     <header>
-
-        <h2>My Portfolio</h2>
-
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <div class="logo">E. Padmavathi</div>
 
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
 
     <!-- Home -->
     <section class="hero" id="home">
+        <div>
+            <img src="photo.jpg" alt="E. Padmavathi">
 
-        <div class="hero-text">
+            <h1>Hello, I'm E. Padmavathi</h1>
 
-            <h1>Hello, I'm <span>Padmavathi</span></h1>
-
-            <h3>AI & Data Science Student</h3>
+            <h2>AI & Data Science Student</h2>
 
             <p>
-                I am a passionate Artificial Intelligence and Data Science student
-                interested in technology, programming, data analytics and
-                developing innovative solutions.
+                Passionate about Artificial Intelligence, Data Science and Technology.
             </p>
 
-            <a href="#contact" class="btn">Contact Me</a>
-
+            <a href="#about" class="btn">Know More</a>
         </div>
-
-
-        <!-- IMPORTANT:
-             Change photo.jpg to your actual photo file name -->
-        <img src="photo.jpg" alt="Padmavathi">
-
     </section>
 
 
     <!-- About -->
-    <section class="about" id="about">
+    <section id="about">
+        <div class="container">
 
-        <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
 
-        <p>
-            I am currently pursuing my degree in Artificial Intelligence and
-            Data Science. I am interested in learning new technologies and
-            improving my technical skills. I enjoy working on projects that
-            help me understand real-world applications of AI and data.
-        </p>
+            <p class="about-text">
+                I am E. Padmavathi, an Artificial Intelligence and Data Science student.
+                I am interested in Artificial Intelligence, Machine Learning,
+                Data Analytics and Web Development.
+                I am continuously learning new technologies and improving my skills
+                to build a successful career in the technology field.
+            </p>
 
+        </div>
     </section>
 
 
     <!-- Skills -->
     <section id="skills">
+        <div class="container">
 
-        <h2>My Skills</h2>
+            <h2 class="section-title">My Skills</h2>
 
-        <div class="skills-container">
+            <div class="skills">
 
-            <div class="skill">Python</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Java</div>
-            <div class="skill">Data Analytics</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">SQL</div>
+                <div class="skill">Python</div>
+
+                <div class="skill">HTML</div>
+
+                <div class="skill">CSS</div>
+
+                <div class="skill">Java</div>
+
+                <div class="skill">SQL</div>
+
+                <div class="skill">Data Analytics</div>
+
+                <div class="skill">Machine Learning</div>
+
+                <div class="skill">Artificial Intelligence</div>
+
+            </div>
 
         </div>
-
     </section>
 
 
     <!-- Projects -->
-    <section class="projects" id="projects">
+    <section id="projects">
+        <div class="container">
 
-        <h2>My Projects</h2>
+            <h2 class="section-title">My Projects</h2>
 
-        <div class="project-container">
+            <div class="projects">
 
-            <div class="project-card">
+                <div class="project">
+                    <h3>Portfolio Website</h3>
 
-                <h3>Portfolio Website</h3>
+                    <p>
+                        A personal portfolio website created using HTML and CSS
+                        to showcase my skills, education and projects.
+                    </p>
+                </div>
 
-                <p>
-                    A personal portfolio website created using HTML and CSS
-                    to showcase my skills, education and projects.
-                </p>
+
+                <div class="project">
+                    <h3>Data Analytics Project</h3>
+
+                    <p>
+                        A project focused on analysing data and finding
+                        useful insights using data analytics techniques.
+                    </p>
+                </div>
+
+
+                <div class="project">
+                    <h3>Machine Learning Project</h3>
+
+                    <p>
+                        A basic machine learning project designed to understand
+                        data preprocessing, model training and prediction.
+                    </p>
+                </div>
 
             </div>
 
+        </div>
+    </section>
 
-            <div class="project-card">
 
-                <h3>Machine Learning Project</h3>
+    <!-- Education -->
+    <section id="education">
+        <div class="container">
+
+            <h2 class="section-title">Education</h2>
+
+            <div class="education">
+
+                <h3>B.E. Artificial Intelligence and Data Science</h3>
 
                 <p>
-                    A machine learning project developed to understand
-                    data preprocessing, model training and prediction.
+                    Madha Engineering College
                 </p>
 
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Data Analytics Project</h3>
+                <p>
+                    Kundrathur, Chennai
+                </p>
 
                 <p>
-                    A data analytics project focused on analyzing data and
-                    presenting useful insights.
+                    Currently pursuing my undergraduate degree.
                 </p>
 
             </div>
 
         </div>
-
-    </section>
-
-
-    <!-- Education -->
-    <section class="education" id="education">
-
-        <h2>Education</h2>
-
-        <h3>Artificial Intelligence & Data Science</h3>
-
-        <p>
-            Madha Engineering College
-        </p>
-
-        <p>
-            Currently pursuing undergraduate degree
-        </p>
-
     </section>
 
 
     <!-- Contact -->
-    <section class="contact" id="contact">
+    <section id="contact" class="contact">
+        <div class="container">
 
-        <h2>Contact Me</h2>
+            <h2 class="section-title">Contact Me</h2>
 
-        <p>Email: your-email@gmail.com</p>
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+            </p>
 
-        <p>Location: Chennai, Tamil Nadu</p>
+            <p>
+                Location: Chennai, Tamil Nadu
+            </p>
 
-        <p>GitHub: github.com/yourusername</p>
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/padmavathi-e-0470963a5/"
+                   target="_blank">
+                    View My LinkedIn Profile
+                </a>
+            </p>
 
+        </div>
     </section>
 
 
     <!-- Footer -->
     <footer>
-
-        <p>© 2026 Padmavathi. All Rights Reserved.</p>
-
+        <p>© 2026 E. Padmavathi. All Rights Reserved.</p>
     </footer>
 
 </body>
