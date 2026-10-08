@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            padding: 50px 8%;
+            background: white;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #2563eb;
+        }
+
+        .hero-text h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .hero-text p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .hero img {
+            width: 280px;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 5px solid #2563eb;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: #111827;
+        }
+
+        .about {
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .projects {
+            background: white;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project-card {
+            width: 300px;
+            background: #f5f7fa;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+            color: #2563eb;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .education {
+            text-align: center;
+        }
+
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        footer {
+            background: #030712;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>Hello, I'm <span>Padmavathi</span></h1>
+
+            <h3>AI & Data Science Student</h3>
+
+            <p>
+                I am a passionate Artificial Intelligence and Data Science student
+                interested in technology, programming, data analytics and
+                developing innovative solutions.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+
+        </div>
+
+
+        <!-- IMPORTANT:
+             Change photo.jpg to your actual photo file name -->
+        <img src="photo.jpg" alt="Padmavathi">
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am currently pursuing my degree in Artificial Intelligence and
+            Data Science. I am interested in learning new technologies and
+            improving my technical skills. I enjoy working on projects that
+            help me understand real-world applications of AI and data.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java</div>
+            <div class="skill">Data Analytics</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">SQL</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    A personal portfolio website created using HTML and CSS
+                    to showcase my skills, education and projects.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Machine Learning Project</h3>
+
+                <p>
+                    A machine learning project developed to understand
+                    data preprocessing, model training and prediction.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Data Analytics Project</h3>
+
+                <p>
+                    A data analytics project focused on analyzing data and
+                    presenting useful insights.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section class="education" id="education">
+
+        <h2>Education</h2>
+
+        <h3>Artificial Intelligence & Data Science</h3>
+
+        <p>
+            Madha Engineering College
+        </p>
+
+        <p>
+            Currently pursuing undergraduate degree
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>Email: your-email@gmail.com</p>
+
+        <p>Location: Chennai, Tamil Nadu</p>
+
+        <p>GitHub: github.com/yourusername</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Padmavathi. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
